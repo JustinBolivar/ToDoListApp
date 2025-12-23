@@ -52,7 +52,11 @@ public class App {
         System.out.print("Enter task priority (Low, Medium, High): ");
         String title = scanner.nextLine();
         
-        Task task = new Task(description, deadline, priority, title);
+        System.out.print("Enter task category: ");
+        String category = scanner.nextLine();
+        
+        Task task = new Task(description, deadline, priority, title, category);
+
         taskManager.addTask(task);
         System.out.println("Task added successfully.");
     }

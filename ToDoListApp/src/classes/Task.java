@@ -13,9 +13,10 @@ public class Task {
     private boolean isCompleted;
     private String priority; // New attribute for task priority
     private String title;
+    private String category;
 
     public Task(String description, String deadline, String priority,
-            String title) {
+            String title, String category) {
         this.id = idCounter++;
         this.description = description;
         LocalDate date = LocalDate.parse(deadline);
@@ -23,6 +24,7 @@ public class Task {
         this.priority = priority; // Set priority
         this.isCompleted = false;
         this.title = title;
+        this.category = category;
     }
 
     public int getId() {
@@ -43,6 +45,10 @@ public class Task {
 
     public String getPriority() {
         return priority; // Getter for priority
+    }
+
+    public String getCategory() {
+        return category; // Getter for priority
     }
 
     public void markAsCompleted() {
@@ -66,6 +72,7 @@ public class Task {
     public String toString() {
         return "Task ID: " + id + ", Description: " + description
                 + ", Completed: " + (isCompleted ? "Yes" : "No")
-                + ", Priority: " + priority; // Include priority in toString
+                + ", Priority: " + priority // Include priority in toString
+                + ", Category: " + category; // Include priority in toString
     }
 }
