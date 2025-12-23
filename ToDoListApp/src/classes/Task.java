@@ -12,16 +12,18 @@ public class Task {
                                 // handling**
     private boolean isCompleted;
     private String priority; // New attribute for task priority
+    private String title;
     private String category;
 
     public Task(String description, String deadline, String priority,
-            String category) {
+            String title, String category) {
         this.id = idCounter++;
         this.description = description;
         LocalDate date = LocalDate.parse(deadline);
         this.deadline = date;
         this.priority = priority; // Set priority
         this.isCompleted = false;
+        this.title = title;
         this.category = category;
     }
 
