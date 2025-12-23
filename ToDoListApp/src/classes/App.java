@@ -49,7 +49,7 @@ public class App {
         System.out.print("Enter task priority (Low, Medium, High): ");
         String priority = scanner.nextLine();
         
-        System.out.print("Enter task priority (Low, Medium, High): ");
+        System.out.print("Enter Title: ");
         String title = scanner.nextLine();
         
         System.out.print("Enter task category: ");
