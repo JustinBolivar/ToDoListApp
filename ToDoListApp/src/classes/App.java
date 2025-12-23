@@ -49,7 +49,10 @@ public class App {
         System.out.print("Enter task priority (Low, Medium, High): ");
         String priority = scanner.nextLine();
         
-        Task task = new Task(description, deadline, priority);
+        System.out.print("Enter task category: ");
+        String category = scanner.nextLine();
+        
+        Task task = new Task(description, deadline, priority, category);
         taskManager.addTask(task);
         System.out.println("Task added successfully.");
     }
